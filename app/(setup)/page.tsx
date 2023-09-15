@@ -2,6 +2,7 @@ import { db } from "@/lib/db";
 import { initialProfile } from "@/lib/initialProfile";
 import { FC } from "react";
 import { redirect } from "next/navigation";
+import IntialModal from "@/components/modals/initial-modal";
 
 interface SetupPageProps {}
 
@@ -21,7 +22,7 @@ const SetupPage: FC<SetupPageProps> = async ({}) => {
     return redirect(`/servers/${server.id}`);
   }
 
-  return <div>SetupPage</div>;
+  return <IntialModal />;
 };
 
 export default SetupPage;
